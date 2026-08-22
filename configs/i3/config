@@ -208,3 +208,4 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 #Ru language
 exec_always --no-startup-id bash -c "sleep 1 && setxkbmap -layout us,ru -option grp:alt_shift_toggle"
+#exec_always setxkbmap -layout us,ru -option grp:alt_shift_toggle
