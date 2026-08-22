@@ -1,11 +1,12 @@
 import subprocess
 import os
+import time
 
 GREEN = "\033[92m"
 RED = "\033[91m"
 
 apps_apt = [
-    "i3 i3status i3lock",
+    "i3 i3status",
     "feh picom",
     "unzip",
     "traceroute",
@@ -24,6 +25,9 @@ apps_apt = [
     "hollywood",
     "cbonsai",
     "cargo",
+    "dex",
+    "xss-lock",
+    "network-manager-gnome",
 ]
 
 packages_cargo = [
@@ -31,12 +35,14 @@ packages_cargo = [
     "lsd",
 ]
 
+errors = []
+
 def run(cmd):
         try:
             subprocess.run(cmd, shell=True, check=True)
             print(f"{GREEN} {cmd}")
         except subprocess.CalledProcessError as e:
-            print(f"{RED}Ошибка в команде: {cmd}")
+            errors.append(f"{RED}Ошибка в команде: {cmd}")
 
 tmp_flag = os.path.expanduser("~/tmp/tmp_for_py")
 
@@ -74,13 +80,21 @@ if not os.path.exists(tmp_flag):
     run("mkdir -p ~/tmp/tmp_for_py")
     print("Первая часть готова")
 
+    if errors != []:
+        for er in errors:
+            print(er)
+    else:
+        print("Ошибок нет...")
+        time.sleep(3)
+        run("reboot")
+
 else:
     #Установка из cargo
     for pkg in packages_cargo:
         run(f"cargo install --locked {pkg}")
 
     # Клонировать репозиторий
-    run("git clone https://github.com/Alehandro77/dotfiles.git ~/dotfiles")
+    run("git clone https://github.com/Alehandro77/for_ubuntu/configs.git ~/dotfiles")
 
     #Удаление конфигов по умолчанию
     run("rm -rf ~/.config/i3")
@@ -98,5 +112,20 @@ else:
     run("cp -rf ~/dotfiles/rofi ~/.config/")
     run("cp -rf ~/dotfiles/superfile ~/.config/")
 
+    #Скачивание обоев
+    run("git clone https://github.com/Alehandro77/for_ubuntu/walpeper.jpg ~/Pictures")
+
+    #Полибар исполняемый
+    run("chmod +x ~/.config/polybar/launch.sh")
+
     run("rm -rf ~/tmp/tmp_for_py")
     print("Вторая часть готова")
+
+    if errors != []:
+        for er in errors:
+            print(er)
+    else:
+        print("Ошибок нет...")
+        time.sleep(3)
+        run("reboot")
+
