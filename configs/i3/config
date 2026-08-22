@@ -201,7 +201,7 @@ client.focused #F0C674 #2A2A1C #E8E8D4 #D97A52 #F0C674
 #client.unfocused #8ABEB7 #2A2A1C #B5D9A0 #3A3A28 #8ABEB7
 
 #walpeper
-exec_always feh --bg-fill /home/vboxuser/Pictures/walpeper.jpg
+exec_always feh --bg-fill /home/sasha/Pictures/walpeper.jpg
 
 #polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
