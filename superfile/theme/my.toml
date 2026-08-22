@@ -1,0 +1,42 @@
+[theme]
+name = "monokai-warm"
+opacity = 0.9
+
+[colors]
+# Background
+background = "#1E1A18"
+
+# Text
+text = "#F8F8F2"
+text_dim = "#75715E"
+
+# Accents
+accent = "#F0C676"
+accent_dim = "#CF9F5A"
+
+# Borders
+border_active = "#F0C676"
+border_inactive = "#3E3A38"
+
+# Selection
+selection_background = "#2D2A28"
+selection_foreground = "#F8F8F2"
+
+# File types
+directory = "#A6E22E"
+file = "#F8F8F2"
+executable = "#F92672"
+symlink = "#66D9EF"
+
+# Status bar
+status_bar_background = "#1E1A18"
+status_bar_text = "#F8F8F2"
+status_bar_accent = "#F0C676"
+
+# Preview window
+preview_background = "#2D2A28"
+preview_text = "#F8F8F2"
+
+# Highlighting
+search_highlight = "#FFE792"
+search_highlight_background = "#3E3A38"
