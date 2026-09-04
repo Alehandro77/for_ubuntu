@@ -1,0 +1,72 @@
+##############################################
+#                                            #
+#           Orange Dark Theme                #
+#                                            #
+##############################################
+
+# This theme is based on your i3/Polybar/Kitty colors.
+# Orange accent + dark background.
+
+###############################################################################
+#                           Code Syntax Highlighting                          #
+###############################################################################
+
+code_syntax_highlight = "catppuccin-mocha"
+
+###############################################################################
+#                                 Base Colors                                 #
+###############################################################################
+
+#-- Full Screen
+full_screen_fg = "#E8E8D4"          # твой foreground
+full_screen_bg = "#1E1A18"          # твой тёмный фон (чуть теплее)
+
+#-- Gradient (оранжевый -> золотой)
+gradient_color = ["#D97A52", "#F0C674"]
+directory_icon_color = "#F0C674"
+
+#-- File Panel
+file_panel_fg = "#E8E8D4"           # текст
+file_panel_bg = "#1E1A18"           # фон панели
+file_panel_border = "#3E3A38"       # граница неактивная
+file_panel_border_active = "#F0C674" # активная граница (золото)
+file_panel_top_directory_icon = "#D97A52"  # иконка папки сверху
+file_panel_top_path = "#F0C674"           # путь (золото)
+file_panel_item_selected_fg = "#E8E8D4"
+file_panel_item_selected_bg = "#2D2A28"   # чуть светлее фона
+
+#-- Footer
+footer_fg = "#E8E8D4"
+footer_bg = "#1E1A18"
+footer_border = "#3E3A38"
+footer_border_active = "#D97A52"    # оранжевый
+
+#-- Sidebar
+sidebar_fg = "#E8E8D4"
+sidebar_bg = "#1E1A18"
+sidebar_title = "#F0C674"           # золото для заголовков
+sidebar_border = "#1E1A18"
+sidebar_border_active = "#D97A52"   # оранжевый
+sidebar_item_selected_fg = "#F0C674"
+sidebar_item_selected_bg = "#2D2A28"
+sidebar_divider = "#3E3A38"
+
+#-- Modals
+modal_fg = "#E8E8D4"
+modal_bg = "#1E1A18"
+modal_border_active = "#3E3A38"
+modal_cancel_fg = "#1E1A18"
+modal_cancel_bg = "#E69B7A"         # светлая терракота
+modal_confirm_fg = "#1E1A18"
+modal_confirm_bg = "#F0C674"        # золото
+
+#-- Help Menu
+help_menu_hotkey = "#F0C674"
+help_menu_title = "#D97A52"
+
+#-- Special
+cursor = "#F0C674"                  # курсор золотом
+correct = "#B5D9A0"                 # зелёный (успех)
+error = "#E69B7A"                   # терракота (ошибка)
+hint = "#B5D9A0"                    # подсказки
+cancel = "#D97A52"                  # отмена
