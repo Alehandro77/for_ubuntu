@@ -30,6 +30,8 @@ apps_apt = [
 
     #Приколы
     "cmatrix",
+
+    "sddm",
 ]
 
 packages_yay = [
@@ -76,6 +78,9 @@ if not os.path.exists(tmp_flag):
     for pkg in packages_yay:
         run(f"yay -S --needed --noconfirm {pkg}")
 
+    run("sudo systemctl enable sddm")
+    run("echo 'exec i3' > ~/.xinitrc")
+    
     #Отчистка кэша шрифта
     run("fc-cache -fv")
 
